@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Rent a Studio After Graduation</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        body{
+            background: #f5f7fa;
+            padding: 25px;
+        }
+        .container{
+            max-width: 1100px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+        h1{
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 40px;
+            font-size: 30px;
+        }
+        .section{
+            margin-bottom: 50px;
+            padding: 25px;
+            background: #f8f9fa;
+            border-radius: 12px;
+            border-left: 5px solid #3498db;
+        }
+        h2{
+            color: #2980b9;
+            margin-bottom: 20px;
+            font-size: 22px;
+        }
+        p{
+            line-height: 1.8;
+            font-size: 16px;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        /* 互动小游戏样式 */
+        .game-wrap{
+            display: grid;
+            grid-template-columns: repeat(4, 90px);
+            gap: 15px;
+            justify-content: center;
+            margin-top: 25px;
+        }
+        .room-card{
+            width: 90px;
+            height: 90px;
+            background: #3498db;
+            color: #fff;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        .room-card.selected{
+            background: #27ae60;
+            transform: scale(1.05);
+        }
+
+        /* 音频按钮 */
+        .audio-btn{
+            padding: 9px 22px;
+            border: none;
+            background: #2980b9;
+            color: #fff;
+            border-radius: 6px;
+            cursor: pointer;
+            margin-right: 12px;
+        }
+        .audio-btn:hover{
+            background: #1a5276;
+        }
+
+        /* 视频样式 */
+        video{
+            width: 100%;
+            border-radius: 10px;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>How to Rent a Studio After Graduation</h1>
+
+        <!-- 1. 互动小游戏 -->
+        <div class="section">
+            <h2>1. Interactive Game: Choose Your Ideal Studio</h2>
+            <p>Click the blue cards to select your favorite studio type for graduation rental.</p >
+            <div class="game-wrap">
+                <div class="room-card">Near Campus</div>
+                <div class="room-card">Subway Nearby</div>
+                <div class="room-card">Cheap Budget</div>
+                <div class="room-card">Fully Furnished</div>
+                <div class="room-card">Quiet Area</div>
+                <div class="room-card">Safe Community</div>
+                <div class="room-card">Single Studio</div>
+                <div class="room-card">Shared Flat</div>
+            </div>
+        </div>
+
+        <!-- 2. 带音频的英文图文 -->
+        <div class="section">
+            <h2>2. Article with Audio: Guide to Renting a Studio</h2>
+            <p><strong>Step 1 Make a budget</strong><br>
+            Set your monthly rent budget according to your salary and living cost after graduation.</p >
+
+            <p><strong>Step 2 Choose location</strong><br>
+            Pick a studio near your workplace, subway station or convenient shopping areas.</p >
+
+            <p><strong>Step 3 Check house condition</strong><br>
+            Inspect water, electricity, network, furniture and safety before signing the contract.</p >
+
+            <p><strong>Step 4 Sign rental contract carefully</strong><br>
+            Read all terms clearly, confirm deposit, rent period and maintenance rules.</p >
+
+            <audio id="myAudio" loop>
+                <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3" type="audio/mpeg">
+                Your browser does not support audio playback.
+            
+            <br><br>
+            <button class="audio-btn" onclick="document.getElementById('myAudio').play()">Play Music</button>
+            <button class="audio-btn" onclick="document.getElementById('myAudio').pause()">Pause Music</button>
+        </div>
+
+        <!-- 3. 视频模块 -->
+        <div class="section">
+            <h2>3. Related Video</h2>
+            <p>Watch the video to learn more tips about renting a studio after graduation.</p >
+            <video controls>
+                <source src="https://www.w3school.com.cn/i/movie.mp4" type="video/mp4">
+                Your browser does not support video.
+            </video>
+        </div>
+    </div>
+
+    <script>
+        // 租房小游戏点击选中效果
+        const cards = document.querySelectorAll('.room-card');
+        cards.forEach(card => {
+            card.addEventListener('click', () => {
+                card.classList.toggle('selected');
+            });
+        });
+    </script>
+</body>
+</html>
